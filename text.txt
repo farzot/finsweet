@@ -1,0 +1,37 @@
+<template>
+  <div class="shadow-md py-4 bg-indigo-900 text-gray-400">
+    <div class="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-8 xl:px-10">
+      <div class="flex text-lg font-bold ml-4 md:ml-0 text-white">Finsweet</div>
+      <div class="hidden md:flex items-center space-x-6">
+        <router-link to="/" class="hover:text-white no-underline">Home</router-link>
+        <router-link to="/about" class="hover:text-white no-underline">About us</router-link>
+        <router-link to="/pricing" class="hover:text-white no-underline">Pricing</router-link>
+        <router-link to="/work" class="hover:text-white no-underline">Work</router-link>
+        <router-link to="/blog" class="hover:text-white no-underline">Blog</router-link>
+      </div>
+      <div class="flex md:hidden">
+        <router-link
+          to="/contact"
+          class="text-white border border-gray-400 px-4 py-2 rounded-full no-underline ml-4 justify-center"
+        >
+          Contact us
+        </router-link>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup></script>
+
+<style lang="scss" scoped>
+@media screen and (min-width: 768px) {
+  .flex {
+    display: flex; // Show flex items on medium screens and above
+  }
+
+  .hidden {
+    display: none; // Hide elements with hidden class on medium screens and above
+  }
+}
+</style>
+
